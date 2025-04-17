@@ -1,0 +1,72 @@
+.landing-page {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: white;
+  padding: 50px 20px;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #ffffff;
+  color: #4caf50;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #f1f1f1;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.features {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+
+  div {
+    border-radius: 20px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  div:hover {
+    background-color: #e0e0e0; /* Light gray background */
+    transform: scale(1.05); /* Slightly enlarge the element */
+  }
+}
+
+.features .form {
+  background-color: #d6d6d6dd;
+  color: #4caf50;
+}
+
+.features .preview {
+
+  background-color: #d6d6d6dd;
+
+  color: #555;
+}

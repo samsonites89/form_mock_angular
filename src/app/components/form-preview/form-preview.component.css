@@ -1,0 +1,40 @@
+.preview-container {
+  position: relative;
+  padding: 20px;
+}
+
+.form-wrapper {
+  position: relative;
+}
+
+.overlay {
+  position: fixed; /* Change to fixed to cover the entire screen */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ensure it spans the full width of the viewport */
+  height: 100vh; /* Ensure it spans the full height of the viewport */
+  background-color: rgba(0, 0, 0, 0.3); /* Less dark transparency */
+  z-index: 1000; /* Ensure it is above all other elements */
+}
+
+.tooltip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%); /* Position above the overlay */
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 2;
+}
+
+.overlay:hover .tooltip {
+  opacity: 1; /* Show tooltip on hover */
+  visibility: visible;
+}

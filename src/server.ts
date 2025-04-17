@@ -7,6 +7,7 @@ import {
 import express from 'express';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { onRequest } from 'firebase-functions/v2/https';
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, '../browser');
@@ -25,6 +26,10 @@ const angularApp = new AngularNodeAppEngine();
  * });
  * ```
  */
+app.get('/api/tester', (req, res) => {
+  res.status(200).json({ message: 'API endpoint is working!' });
+});
+
 
 /**
  * Serve static files from /browser
@@ -64,3 +69,5 @@ if (isMainModule(import.meta.url)) {
  * Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.
  */
 export const reqHandler = createNodeRequestHandler(app);
+
+export const ssrServer = onRequest(app);

@@ -1,0 +1,16 @@
+<div class="landing-page">
+  <header class="hero">
+    <h1>Welcome to Form Mock App</h1>
+    <p>Your one-stop solution for form previews and management.</p>
+    <button class="cta-button" routerLink="/configs" (click)="navigate('configs')">Configuration</button>  </header>
+  <section class="features">
+    <div class="form" (click)="navigate('form')">
+      <h2>Form</h2>
+      <p>check out forms</p>
+    </div>
+    <div class="preview" (click)="navigate('preview')">
+      <h2>Preview</h2>
+      <p>preview the form</p>
+    </div>
+  </section>
+</div>

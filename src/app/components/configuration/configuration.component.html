@@ -1,0 +1,30 @@
+<div class="config-container">
+  <h2>Configuration Page</h2>
+  <form>
+    <div class="form-group">
+      <label for="password">Shared Secret:</label>
+      <div class="password-container">
+        <input
+          [type]="passwordVisible ? 'text' : 'password'"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          placeholder="Enter password"
+        />
+        <button
+          type="button"
+          class="toggle-password"
+          (click)="togglePasswordVisibility()"
+          aria-label="Toggle password visibility"
+        >
+          <span *ngIf="passwordVisible">🙈</span> <!-- Hide icon -->
+          <span *ngIf="!passwordVisible">👁️</span> <!-- Show icon -->
+        </button>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="button" (click)="savePassword()">Save</button>
+      <button type="button" (click)="goHome()">To Home</button>
+    </div>
+  </form>
+</div>
